@@ -24,7 +24,7 @@ export default function listCommand(){
                         return(
                             <div key={index} className="flex flex-col gap-2 border-solid border-2 border-sky-500 rounded p-4 cursor-pointer hover:bg-sky-200">
                                 <h1>Nom : { command.name }</h1>
-                                <h4>Prix : { command.status }</h4>
+                                <h4>Status : { command.status }</h4>
                                 <h4>Total : { command.total }</h4>
                                 <h4>Borne N°: { command.user_id }</h4>
                                 {

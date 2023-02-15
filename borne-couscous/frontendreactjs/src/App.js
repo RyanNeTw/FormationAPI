@@ -18,7 +18,7 @@ import { StoreContext } from './Providers/Store';
 
 function App() {
   return (
-    <div className="App p-12 bg-sky-100 min-h-screen">
+    <div className="App pl-12 pr-12 bg-sky-100 min-h-screen">
       <StoreProvider>
         <BrowserRouter>
           <Routes>

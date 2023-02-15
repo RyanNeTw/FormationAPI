@@ -5,8 +5,7 @@ import DeleteCategorie from '../delete/deleteCategorie';
 
 export default function listCategory(){
     const [categories, setCategories] = useState([])
-
-    const navigate = useNavigate();
+    const navigate = useNavigate()
 
     useEffect(()=>{
         allCategories()

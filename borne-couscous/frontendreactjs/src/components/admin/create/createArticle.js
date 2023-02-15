@@ -5,7 +5,7 @@ import { StoreProvider, StoreContext } from "../../../Providers/Store";
 export default function createArticle(){
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
-    const {tokenStore} = useContext(StoreContext);
+    const {tokenStore, setCommands, commands} = useContext(StoreContext);
     const [categories, setCategories] = useState([]);
     const [ingredients, setIngredients] = useState([]);
     const [dataUpdate, setDataUpdate] = useState("");
@@ -45,9 +45,12 @@ export default function createArticle(){
         }).then((res) => {
             res.json().then((json) =>{
                 setDataUpdate(json.message)
+                const command = [data]
+                setCommands([...commands, ...command])
                 setTimeout(() => {
                     setDataUpdate("")
                 }, 2000);
+
             })
         })
     }

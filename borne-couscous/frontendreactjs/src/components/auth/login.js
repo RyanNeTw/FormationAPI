@@ -57,7 +57,6 @@ export default function Login() {
       }).then((res) => {
           res.json().then((json) =>{
             setRoleStore(json.role.name) 
-            localStorage.setItem('role', json.role.name) 
             console.log(json.role.name)
           })
       })
